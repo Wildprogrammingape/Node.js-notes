@@ -1,0 +1,5 @@
+用来直接运行JavaScript到电脑上，或者server上
+
+JS只能运行在browser中，通过V8 engine转译成machine code
+
+而JS也可以运行到computer中，通过Node.js engine转译成machine code
