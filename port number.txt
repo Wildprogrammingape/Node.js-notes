@@ -1,0 +1,3 @@
+port number是端口，由于不同软件都需要在internet上获取数据，所以不同软件对应不同端口，用于区分
+
+常见的localhost的Port number是3000
