@@ -1,0 +1,32 @@
+// 导入node使用的http module
+const http = require('http');
+// 导入node使用的file system module用于返回给browser的index.html
+const fs = require('fs');
+
+// 新建服务器,里面的callback函数是有browser访问服务器时候执行的操作
+// request 对象 -- 访问的浏览器信息
+// response 对象 -- 返回给浏览器的信息
+const server = http.createServer((request, response) => {
+
+    // 查看request object
+    console.log(request.url, request.method);
+
+    // 设置返回给浏览器的数据 set header content type
+    response.setHeader('Content-Type','text/html');
+    // send html file
+    fs.readFile('views/index.html', (error, data) => {
+        if(error){
+            console.log(error);
+            response.end();
+        }
+        else{
+            response.write(data);
+            response.end();
+        }
+    })
+    
+});
+// 服务器对应localhost:3000
+server.listen(3000, 'localhost', () => {
+    console.log('listenning request on port 3000');
+});
