@@ -1,0 +1,29 @@
+module用于从其他文件导入数据
+
+module.js:
+
+// Import data from another file
+
+// const data = require('./people');
+// console.log(data.people, data.ages);
+
+// Object destructuring
+const {people, ages} = require('./people');
+console.log(people, ages);
+
+// os Object
+const os = require('os');
+console.log(os.platform(), os.homedir());
+
+
+people.js:
+
+const people = ['Long Chen', 'Barry', 'Sophera'];
+const ages = [18, 20, 25];
+console.log(people);
+
+// export data as Object
+module.exports = {
+    people: people,
+    ages: ages
+}
