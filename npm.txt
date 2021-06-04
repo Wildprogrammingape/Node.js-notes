@@ -1,0 +1,24 @@
+npm是node package manegement 包管理，用来下载其他第三方的包
+
+如：
+
+1)下载nodemon来自动刷新node application当代码改变后
+
+npm install -g nodemon  	在global全局环境下载nodemon包
+nodemon  fileName                  运行当前文件下的node项目并实时刷新
+
+2) 使用package file来表明该项目用了哪些 third party package and dependency
+
+npm init			初始化一个该项目的package.json文件
+
+3) lodash 提供utility method
+
+npm install lodash
+
+4) npm install		自动下载项目所需要的依赖 (根据package.json中的dependency)
+
+5) npm install express	下载express框架
+
+6) npm install ejs		下载EJS template engine
+
+
