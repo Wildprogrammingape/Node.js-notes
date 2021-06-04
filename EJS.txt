@@ -1,0 +1,4 @@
+EJS是一种view engine，用来创建template，动态的HTML文件
+
+<% 	%>  里面直接写JavaScript
+
